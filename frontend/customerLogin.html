@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank management Customer Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="navbar navbar-dark bg-primary">
+        <div class="left w-25 d-flex justify-content-center">
+            <img src="img/bank_logo.jpg" alt="Bank logo">
+        </div>
+        <div class="mid w-50">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="about.html">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="employee.html">Employee</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="customer.html">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="contact.html">Contact us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="btn dropdown-toggle text-light" type="button"
+                        data-bs-toggle="dropdown">Services</button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="customerAccunt.html">Create Account for customer</a></li>
+                        <li><a class="dropdown-item" href="employeeAccount.html">Register for employee</a></li>
+                        <li><a class="dropdown-item" href="#">Add Amount</a></li>
+                        <li><a class="dropdown-item" href="#">Money Transfer</a></li>
+                        <li><a class="dropdown-item" href="#">E - Passbook</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="btn dropdown-toggle text-light" type="button"
+                        data-bs-toggle="dropdown">Login</button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="employeeLogin.html">Employee Login</a></li>
+                        <li><a class="dropdown-item" href="customerLogin.html">Customer Login</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="w-25 d-flex justify-content-center">
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-success border border-dark text-light" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    <div class="content">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="img carousel-item active">
+                    <img src="img/bank_img_5.jfif" class="d-block w-100" alt="...">
+                </div>
+                <div class="img carousel-item">
+                    <img src="img/bank_img_2.jfif" class="d-block w-100" alt="...">
+                </div>
+                <div class="img carousel-item">
+                    <img src="img/bank_img_3.jfif" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container w-25 h-50">
+        <h3 class="w-75 text-primary border-bottom border-primary border-4 py-3">Customer Login</h3>
+        <input class="w-100 p-2 mt-3 bg-transparent border-0 border-bottom border-primary border-3" type="text"
+            name="username" id="username" placeholder="Enter Your Username">
+        <input class="w-100 p-2 mt-3 bg-transparent border-0 border-bottom border-primary border-3" type="password"
+            name="password" id="password" placeholder="Enter Your Password">
+        <button class="w-100 mt-3 text-center btn btn-info">Login</button>
+        <div class="text-center mt-3 text-info">
+            forgot
+            <a href="#">password</a>/
+            <a href="#">Username</a>
+        </div>
+        <div class="text-center mt-3">
+            <a class="" href="customerAccunt.html">Create Your Acoount</a>
+        </div>
+    </div>
+    <footer class="bg-dark">
+        <p class="text-center text-light">copyright @ manu patel</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

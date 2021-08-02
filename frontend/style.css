@@ -1,0 +1,24 @@
+.left img{
+    width: 45px;
+}
+
+.img img{
+    height: 600px;
+}
+.carousel-caption{
+    bottom: 300px;
+}
+.bg-h3-about{
+    background: linear-gradient(chocolate, blueviolet);
+}
+.content-createAccount{
+    background: linear-gradient(rgb(199, 241, 10), rgb(100, 100, 100));
+}
+
+/* UTILS CSS */
+.red{
+    border: 2px solid red;
+}
+.green{
+    border: 2px solid green;
+}

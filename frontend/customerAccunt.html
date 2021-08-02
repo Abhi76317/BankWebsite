@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank management Customer Account</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar navbar-dark bg-primary">
+        <div class="left w-25 d-flex justify-content-center">
+            <img src="img/bank_logo.jpg" alt="Bank logo">
+        </div>
+        <div class="mid w-50">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="about.html">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="employee.html">Employee</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="customer.html">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="contact.html">Contact us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="btn dropdown-toggle text-light" type="button"
+                        data-bs-toggle="dropdown">Services</button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="customerAccunt.html">Create Account for customer</a></li>
+                        <li><a class="dropdown-item" href="employeeAccount.html">Register for employee</a></li>
+                        <li><a class="dropdown-item" href="#">Add Amount</a></li>
+                        <li><a class="dropdown-item" href="#">Money Transfer</a></li>
+                        <li><a class="dropdown-item" href="#">E - Passbook</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="btn dropdown-toggle text-light" type="button"
+                        data-bs-toggle="dropdown">Login</button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="employeeLogin.html">Employee Login</a></li>
+                        <li><a class="dropdown-item" href="customerLogin.html">Customer Login</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="w-25 d-flex justify-content-center">
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-success border border-dark text-light" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    <div class="content-createAccount py-5">
+        <div class="container bg-light w-75 border border-dark pb-5">
+            <h4 class="fst-italic text-warning p-4">Indian Bank</h4>
+            <h5 class="text-center">ACCOUNT OPENING FORM FOR INDIVIDUALS</h5>
+            <hr>
+            <div class="d-flex justify-content-center">
+                <form class="position-relative w-75 border border-dark" onsubmit="return onSubmit()">
+                    <input id="todayDate" class="w-25 position-absolute top-0 end-0" type="date">
+                    <div class="d-flex flex-column p-5">
+                        <div class="p-2">
+                            <label for="name">Name : </label>
+                            <input class="w-100" id="" type="text" placeholder="Enter your name" required>
+                        </div>
+                        <div class="p-2">
+                            <label for="name"> Father Name : </label>
+                            <input class="w-100" type="text" placeholder="Enter your father name" required>
+                        </div>
+                        <div class="p-2">
+                            <label for="name">Mother Name : </label>
+                            <input class="w-100" type="text" placeholder="Enter your mother name">
+                        </div>
+                        <div class="p-2">
+                            <label for="gender">Select your gender : </label>
+                            <div class="">
+                                <input class="" type="radio" name="gender" id="" value="male">
+                                <label class="" for="">Male</label>
+                            </div>
+                            <div class="">
+                                <input class="" type="radio" name="gender" id="" value="female">
+                                <label class="" for="">Female</label>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <label for="birthdate">Date of Birth : </label>
+                            <input class="w-100" type="date" placeholder="Enter your date of birth">
+                        </div>
+                        <div class="p-2">
+                            <label for="email">Email : </label>
+                            <input class="w-100" type="email" placeholder="Enter your email">
+                        </div>
+                        <div class="p-2">
+                            <label for="phone">Mobile No : </label>
+                            <input class="w-100" type="number" placeholder="Enter your mobile no">
+                        </div>
+                        <div class="p-2">
+                            <label for="phone">Alternet Mobile No : </label>
+                            <input class="w-100" type="number" placeholder="Enter your alternet mobile no">
+                        </div>
+                        <div class="p-2">
+                            <label for="address">Permanent Address : </label>
+                            <textarea name="permanent-address" id="" cols="85" rows="4"
+                                placeholder="Enter your permanent address"></textarea>
+                        </div>
+                        <div class="p-2">
+                            <label for="address">Corrospondence Address : </label>
+                            <textarea name="corrospondence-address" id="" cols="85" rows="4"
+                                placeholder="Enter your corrospondence address"></textarea>
+                        </div>
+                        <div class="p-2">
+                            <h5>TERMS & CONDITION :</h5>
+                            I/We have read, understood and agree to abide by the Bank's rules relating to the conduct of
+                            the above accounts / services / products / Fee & charges which are displayed on the website
+                            / contained in the brochures of the Bank from time to time.
+                            <ul>
+                                <li>
+                                    I/We wish to be informed about the various features/ products and promotional offers
+                                    made by the bank from time to time.
+                                </li>
+                                <li>
+                                    Please do not call / contact me/us for various features/ products and promotional
+                                    offers made by the bank from time to time.
+                                </li>
+                                <li>
+                                    Please issue book and recover charges from my/our account as per norms of the Bank.
+                                </li>
+                                <li>
+                                    Account will be operated and balance along with intrest payble as per operational
+                                    instructions above.
+                                </li>
+                                <li>
+                                    I shall represent the said minor in all future transictions of any discription in
+                                    the above account untill the said minor attains majority.
+                                </li>
+                                <li>
+                                    I will indemnify the Bank aggainst the claim of the above minor of any
+                                    withdrall/transactions made by me in his/her account.
+                                </li>
+                                <li>
+                                    I/We understand that in the event of the death of the depositor(s), premature
+                                    termination of the term deposit would be allowed without any penal charges to the
+                                    claimant(s) after following the due procedure.
+                                </li>
+                                <li>
+                                    I / We also agree to maintain the minimum / quartely average balance which the bank
+                                    may pprescribe as the minimum / quartely average balance to be maintained to avail
+                                    the facilities and agree to pay the charges if minimum / quartely average balance is
+                                    not maintained and any other charges stipulated by the Bank. I/We understand that
+                                    any change in this respect will be notified by the bank on its website also will be
+                                    displayed on the notice board of the branches one month in advance.
+                                </li>
+                                <li>
+                                    I / We shall fill up separate pay-in-slips pprescribed by the Bank for various time
+                                    deposit schemes. I/We understand that the Team deposit shall be under auto-renewal
+                                    scheme of the Bank unless otherwise specified by me/us.
+                                </li>
+                                <li>
+                                    I/We authorize Indian Bank /its Group Companies or its/their agents to make
+                                    references and enquiries as may be deemed necessary in their discretion with regard
+                                    to the information furnished in this application. Indian Bank and its Group
+                                    entities/copmanies are empowered to exchange, share or part with all the
+                                    information, data or documents relating to my/our application inter se among
+                                    themselves or to other Banks / Financial Institutions / Credit Bureaus / Agencies /
+                                    Statutory Bodies / such other entities / persons as may be deemed necessary or
+                                    appropriate or as may be required for processing of such information / data by such
+                                    person/s or for furnishing of the processed information / data / products thereof to
+                                    other Banks / Financial institution / Credit Bureaus / Agencies / user registered
+                                    with such agenciea.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="p-2 d-flex">
+                            <div class="p-2">
+                                <input class="w-75" type="file" placeholder="Candidate Photo">
+                                <p>Candidate PHOTO</p>
+                            </div>
+                            <div>
+                                <input class="w-75" type="file" placeholder="Candidate Signature">
+                                <p>Candidate Signature</p>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <label for="username">Username : </label>
+                            <input class="w-100" type="text" placeholder="Your username">
+                        </div>
+                        <div class="p-2">
+                            <label for="upiID">UPI ID : </label>
+                            <input class="w-100" type="text" placeholder="Your UPI ID">
+                        </div>
+                        <div class="p-2">
+                            <label for="password">Create password : </label>
+                            <input class="w-100" type="password" placeholder="Create your password ">
+                        </div>
+                        <div class="p-2 pb-5">
+                            <label for="password">Conferm password : </label>
+                            <input class="w-100" type="password" placeholder="re-enter your password">
+                        </div>
+                        <input class="bg-info btn" type="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark">
+        <p class="text-center text-light">copyright @ manu patel</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Auto fill Date
+        let date = new Date();
+        let todayDate = document.getElementById('todayDate');
+        todayDate.value = date.getFullYear().toString() + '-' + (date.getMonth() + 1).toString().padStart(2, 0) +   
+            '-' + date.getDate().toString().padStart(2, 0);
+
+
+        // function to check input
+        function checkInput(name, input) {
+            if (name.length > 2 && name.length <= 20) {
+                console.log(name);
+                input.classList.remove("red");
+                input.classList.add("green");
+                if (! isNaN(name)) {
+                    input.classList.remove("green");
+                    input.classList.add("red");
+                    return false;
+                }
+                // return true;
+            }
+            else {
+                input.classList.remove("green");
+                input.classList.add("red");
+                return false;
+            }
+        }
+        function formValidation() {
+            let formData = new FormData()
+            const form = document.querySelectorAll("form");
+            const inputelement = form[1].querySelectorAll("input");
+            const inputtextarea = form[1].querySelectorAll("textarea");
+            let customerName = inputelement[1].value;
+            checkInput(customerName, inputelement[1]);
+            let customerFatherName = inputelement[2].value;
+            checkInput(customerFatherName, inputelement[2]);
+            let customerMotherName = inputelement[3].value;
+            checkInput(customerMotherName, inputelement[3]);
+
+            // check gender
+            if (inputelement[4].checked) {
+                let gender = inputelement[4].value;
+                console.log(gender);
+                // return true;
+            }
+            else if (inputelement[5].checked) {
+                let gender = inputelement[5].value;
+                console.log(gender);
+                // return true;
+            }
+            else {
+                alert("Please select your Gender !")
+            }
+
+            // check Age
+            let dob = inputelement[6].value;
+            let IndStdDob = new Date(dob);
+            let milliSecondDob = Date.now() - IndStdDob.getTime();
+            let IndStdAge = new Date(milliSecondDob);
+            let age = Math.abs(IndStdAge.getUTCFullYear() - 1970);
+            if (age > 17) {
+                console.log(age);
+                inputelement[6].classList.remove("red");
+                inputelement[6].classList.add("green");
+                // return true;
+            }
+            else {
+                inputelement[6].classList.remove("green");
+                inputelement[6].classList.add("red");
+                return false;
+            }
+
+            // Email
+            let customerEmail = inputelement[7].value;
+            console.log(customerEmail);
+
+            // Mobile Number
+            let permanentMobile = inputelement[8].value;
+            if (permanentMobile.length == 10) {
+                inputelement[8].classList.remove("red");
+                inputelement[8].classList.add("green");
+                // return true;
+            }
+            else {
+                inputelement[8].classList.remove("green");
+                inputelement[8].classList.add("red");
+                return false;
+            }
+
+            let alternetMobile = inputelement[9].value;
+            if (alternetMobile.length == 10) {
+                inputelement[9].classList.remove("red");
+                inputelement[9].classList.add("green");
+                // return true;
+            }
+            else {
+                inputelement[9].classList.remove("green");
+                inputelement[9].classList.add("red");
+                return false;
+            }
+
+            // Address
+            let permanentAddress = inputtextarea[0].value;
+            if (permanentAddress.length > 2) {
+                console.log(permanentAddress.length);
+                console.log(permanentAddress);
+                inputtextarea[0].classList.remove("red");
+                inputtextarea[0].classList.add("green");
+                // return true;
+            }
+            else {
+                console.log(permanentAddress.length);
+                inputtextarea[0].classList.remove("green");
+                inputtextarea[0].classList.add("red");
+                return false;
+            }
+
+            let corrospondenceAddress = inputtextarea[1].value;
+            if (corrospondenceAddress.length > 2) {
+                console.log(corrospondenceAddress.length);
+                console.log(corrospondenceAddress);
+                inputtextarea[1].classList.remove("red");
+                inputtextarea[1].classList.add("green");
+                // return true;    
+            }
+            else {
+                console.log(corrospondenceAddress.length);
+                inputtextarea[1].classList.remove("green");
+                inputtextarea[1].classList.add("red");
+                return false;
+            }
+
+            // Username
+            let customerUsername = inputelement[12].value;
+            checkInput(customerUsername, inputelement[12]);
+            
+            // // UPI ID
+            let customerUPIID = inputelement[13].value;
+            checkInput(customerUPIID, inputelement[13]);
+
+            // Password
+            let password = inputelement[14].value;
+            let confermPassword = inputelement[15].value;
+            if(password.length > 5 && password.length <= 15){
+                inputelement[14].classList.remove("red");
+                 inputelement[14].classList.add("green");
+                //  return true;
+            }
+            else{
+                inputelement[14].classList.remove("green");
+                 inputelement[14].classList.add("red");
+                 return false;
+            }
+            if(password === confermPassword){
+                inputelement[15].classList.remove("red");
+                 inputelement[15].classList.add("green");
+                //  return true;
+            }
+            else{
+                inputelement[15].classList.remove("green");
+                 inputelement[15].classList.add("red");
+                 return false;
+            }
+            return true;
+        }
+
+        function onSubmit() {
+            return  formValidation();
+        }
+    </script>
+</body>
+
+</html>
