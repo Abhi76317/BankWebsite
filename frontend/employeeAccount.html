@@ -67,7 +67,7 @@
             <h5 class="text-center">REGISTRATION FORM FOR EMPLOYEE</h5>
             <hr>
             <div class="d-flex justify-content-center">
-                <form class="position-relative w-75 border border-dark" onsubmit="return onSubmit()">
+                <form class="position-relative w-75 border border-dark" action="employeeRegister" method="post" onsubmit="return onSubmit()">
                     <input class="w-25 position-absolute top-0 end-0" id="todayDate" type="date">
                     <div class="d-flex flex-column p-5">
                         <div class="p-2">
@@ -76,8 +76,7 @@
                         </div>
                         <div class="p-2">
                             <label for="name"> Father Name : </label>
-                            <input class="w-100" type="text" placeholder="Enter your father name"
-                                oninput="onInput(this)">
+                            <input class="w-100" type="text" placeholder="Enter your father name" oninput="onInput(this)">
                         </div>
                         <div class="p-2">
                             <label for="name">Mother Name : </label>
@@ -162,137 +161,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-    <script>
-        // let rtn = false;
-        let date = new Date();
-        let todayDate = document.getElementById('todayDate');
-        todayDate.value = date.getFullYear().toString() + '-' + (date.getMonth() + 1).toString().padStart(2, 0) +
-            '-' + date.getDate().toString().padStart(2, 0);
-
-        function onInput(name) {
-            // console.log("He");
-            let nam = name.value;
-            if (nam.length < 3 || nam.length > 30) {
-                name.classList.remove("green");
-                name.classList.add("red");
-            }
-            else {
-                name.classList.remove("red");
-                name.classList.add("green");
-            }
-        }
-        function onInputMob(mob) {
-            let num = mob.value;
-            if (num.length != 10) {
-                mob.classList.remove("green");
-                mob.classList.add("red");
-            }
-            else {
-                mob.classList.remove("red");
-                mob.classList.add("green");
-            }
-        }
-        function onInputAdd(address) {
-            let addr = address.value;
-            console.log(addr.length);
-            if (addr.length < 3) {
-                address.classList.remove("green");
-                address.classList.add("red");
-            }
-            else {
-                address.classList.remove("red");
-                address.classList.add("green");
-            }
-        }
-        function onInputpass(name) {
-            let nam = name.value;
-            if (nam.length < 6 || nam.length > 15) {
-                name.classList.remove("green");
-                name.classList.add("red");
-            }
-            else {
-                name.classList.remove("red");
-                name.classList.add("green");
-            }
-        }
-
-        function onSubmit() {
-            let formData = new FormData()
-            const form = document.querySelectorAll("form");
-            const inputelement = form[1].querySelectorAll("input");
-            const textareaelement = form[1].querySelectorAll("textarea");
-            let employeeName = inputelement[1].value;
-            let employeeFatherName = inputelement[2].value;
-            let employeeMotherName = inputelement[3].value;
-
-            let dob = inputelement[6].value;
-            let IndStdDob = new Date(dob);
-            let milliSecondDob = Date.now() - IndStdDob.getTime();
-            let IndStdAge = new Date(milliSecondDob);
-            let age = Math.abs(IndStdAge.getUTCFullYear() - 1970);
-
-            let employeeEmail = inputelement[7].value;
-            let mobileNumber = inputelement[8].value;
-            let alternetMobileNumber = inputelement[9].value;
-            let perAddress = textareaelement[0].value;
-            let corAddress = textareaelement[1].value;
-            let userName = inputelement[12].value;
-            let password = inputelement[13].value;
-            let confermPassword = inputelement[14].value;
-
-
-            if (employeeName.length < 3 || employeeName.length > 30) {
-                return false;
-            }
-            else if (employeeFatherName.length < 3 || employeeFatherName.length > 30) {
-                return false;
-            }
-            else if (employeeMotherName.length < 3 || employeeMotherName.length > 30) {
-                return false;
-            }
-            else if (age < 18) {
-                inputelement[6].classList.toggle("red");
-                return false;
-            }
-            else if (mobileNumber.length != 10) {
-                return false;
-            }
-            else if (alternetMobileNumber.length != 10) {
-                return false;
-            }
-            else if (perAddress.length < 3) {
-                return false;
-            }
-            else if (corAddress.length < 3) {
-                return false;
-            }
-            else if (userName.length < 6 || userName.length > 15) {
-                return false;
-            }
-            else if (password.length < 6 || password.length > 15) {
-                return false;
-            }
-            else if (confermPassword != password) {
-                alert("Passwoed does not match!")
-                return false;
-            }
-
-            if (inputelement[4].checked) {
-                let gender = inputelement[4].value;
-                console.log(gender);
-            }
-            else if (inputelement[5].checked) {
-                let gender = inputelement[5].value;
-                console.log(gender);
-            }
-            else {
-                alert("Please select your Gender !!");
-                return false;
-            }
-
-            return true;
-        }
-    </script>
+    <script src="./employeeAccount.js"></script>
     <!-- <link rel="stylesheet" href="utils.css"> -->
 </body>
 
